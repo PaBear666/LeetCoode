@@ -14,17 +14,15 @@
  */
  var maxProfit = function(prices) {
     var maxProfit = 0;
-    var sellPrice = prices[0];
     var buyPrice = undefined;
 
     for (let index = 1; index < prices.length; index++) {
-        if(buyPrice === undefined || prices[index - 1] < buyPrice){
+        if( prices[index - 1] < buyPrice || buyPrice === undefined){
             buyPrice = prices[index - 1];
         }
-        sellPrice = prices[index];
 
-        if(maxProfit < sellPrice - buyPrice){
-            maxProfit = sellPrice - buyPrice;
+        if(maxProfit < prices[index] - buyPrice){
+            maxProfit = prices[index] - buyPrice;
         }
     }
     return maxProfit;
