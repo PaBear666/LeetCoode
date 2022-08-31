@@ -1,1 +1,2 @@
-Solutions for LeetCode
+Solutions for LeetCode Patterns
+https://seanprashad.com/leetcode-patterns/
